@@ -1,0 +1,225 @@
+@font-face { font-family: truefont; src: url('font.ttf'); }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'truefont', monospace;
+    background-color: #282828; /* Gruvbox Dark bg0 */
+    color: #ebdbb2; /* Gruvbox Light fg */
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Header */
+.header {
+    background-color: #3c3836; /* Gruvbox Dark bg1 */
+    padding: 2px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    max-height: 100%;
+    height: 100px;
+    display: block;
+}
+
+.header-title {
+    font-weight: normal;
+}
+
+/* Menu Bar */
+.menu-bar {
+    background-color: #3c3836; /* Gruvbox Dark bg1 */
+    color: #a89984; /* Gruvbox Dark fg4 */
+    padding: 2px 8px;
+    display: flex;
+    gap: 20px;
+}
+
+.menu-bar a {
+    text-decoration: none;
+}
+
+.menu-item {
+    cursor: pointer;
+    color: #ebdbb2;
+}
+
+.menu-item span {
+    text-decoration: underline;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* Left Panel - Navigation */
+.left-panel {
+    width: 300px;
+    background-color: #1d2021; /* Gruvbox Dark bg0_h */
+    border-right: 2px solid #3c3836;
+    display: flex;
+    flex-direction: column;
+}
+
+.panel-header {
+    background-color: #83a598; /* Gruvbox Dark blue */
+    color: #1d2021;
+    padding: 2px 8px;
+    font-weight: bold;
+}
+
+.file-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 4px;
+}
+
+.file-item {
+    padding: 2px 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.file-item:hover {
+    background-color: #83a598; /* Gruvbox Dark blue */
+    color: #1d2021;
+}
+
+.file-item.selected {
+    background-color: #83a598; /* Gruvbox Dark blue */
+    color: #1d2021;
+}
+
+.file-name {
+    flex: 1;
+}
+
+.file-info {
+    display: flex;
+    gap: 8px;
+    color: #665c54; /* Gruvbox Dark bg4 */
+}
+
+/* Right Panel - Content */
+.right-panel {
+    flex: 1;
+    background-color: #1d2021; /* Gruvbox Dark bg0_h */
+    display: flex;
+    flex-direction: column;
+}
+
+.content-area {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.content-area h1 {
+    color: #f5d689;
+    font-size: 18px;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+.content-area h2 {
+    color: #b8bb26; /* Gruvbox Dark bright green */
+    font-size: 16px;
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+.content-area p {
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.content-area code {
+    background-color: #1d2021; /* Gruvbox Dark bg0_h */
+    color: #b8bb26; /* Gruvbox Dark bright green */
+    padding: 2px 6px;
+}
+
+/* Panel Info Bar */
+.panel-info {
+    background-color: #1d2021; /* Gruvbox Dark bg0_h */
+    color: #665c54; /* Gruvbox Dark bg4 */
+    padding: 2px 8px;
+    border-top: 1px solid #3c3836;
+    font-size: 12px;
+}
+
+/* Footer */
+.footer {
+    background-color: #3c3836; /* Gruvbox Dark bg1 */
+    color: #1d2021; /* Gruvbox Dark bg0_h */
+    padding: 2px 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-item {
+    cursor: pointer;
+}
+
+.footer-item span {
+    color: #fabd2f; /* Gruvbox Dark bright yellow */
+    margin-right: 4px;
+}
+
+/* Command Line */
+.command-line {
+    background-color: #1d2021; /* Gruvbox Dark bg0_h */
+    color: #ebdbb2; /* Gruvbox Light fg */
+    padding: 4px 8px;
+    border-top: 1px solid #3c3836;
+}
+
+.command-line::before {
+    content: '$ ';
+    color: #b8bb26; /* Gruvbox Dark bright green */
+}
+
+.main-content a {
+    color: #d3869b; /* Gruvbox Dark bright purple */
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1d2021; /* Gruvbox Dark bg0_h */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3c3836; /* Gruvbox Dark bg1 */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #504945; /* Gruvbox Dark bg2 */
+}
